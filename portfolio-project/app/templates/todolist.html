@@ -1,0 +1,16 @@
+{% extends "index.html" %}
+
+{% block todo %}
+<ul>
+    {% if todo.len == 0 %}
+    sorry there are no list items
+    {% else %}
+        {% for todo in todolist %}
+        <li>
+            {{ todo.title }}: {% if todo.completed == Treu %} completed {% endif %}
+        </li>
+        {% endfor %}
+    {% endif %}
+</ul>
+{% endblock %}
+

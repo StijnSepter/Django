@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>python</title>
+    <link rel="stylesheet" href="{% static '../static/style.css' %}">
+</head>
+<body>
+    <nav>
+    </nav>
+    {% block title %}
+    {% endblock %}
+    <div>
+        {% block todo %}
+        {% endblock %}
+    </div>
+</body>
+</html>
