@@ -1,28 +1,29 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>python</title>
-    <link rel="stylesheet" href="{% static '../static/style.css' %}">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Stijn Septer</title>
+    <link rel="stylesheet" href="{% static '../static/style.css' %}" />
+  </head>
+  <body>
     <nav>
-        <h1>title</h1>
-        <ul id="title_links">
-            <li><a href="#">about me</a></li>
-            <li><a href="#">products</a></li>
-            <li><a href="#">my goal</a></li>
-            <li><a href="#">contact</a></li>
-        </ul>
+      <ul id="title_links">
+        <li><a class="navbar_menu" href="#">about me</a></li>
+        <li><a class="navbar_menu" href="#">products</a></li>
+        <li><a class="navbar_menu" href="#">my goal</a></li>
+        <li><a class="navbar_menu" href="#">contact</a></li>
+      </ul>
+      <div id="hamburgermenu_container"><a class="navbar_menu" id="hamburgerMenu" href="#" onclick="myFunction()"><i id="hamburgerIcon" class="bi bi-list"></i></a></div>
+        <h1>Hello I am Stijn Septer</h1>
+        <div id="sub_title_container">
+          <!-- <h2 id="sub_title">Lorem ipsum dolor sit amet consectetur.</h2> -->
+        </div>
     </nav>
-    {% block title %}
-    {% endblock %}
-    <div>
-        {% block todo %}
-        {% endblock %}
-    </div>
-    <div> Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus commodi, temporibus accusantium corporis, consectetur, omnis ipsum expedita est sunt nostrum vel iusto magnam consequuntur quasi velit laborum voluptates nobis perspiciatis.</div>
-</body>
+    {% block projects %} {% endblock %}
+    <div>{% block todo %} {% endblock %}</div>
+    <footer></footer>
+  </body>
+  <script src="{% static '../static/main.js' %}"></script>
 </html>
