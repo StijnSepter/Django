@@ -10,6 +10,6 @@ class urlItem(models.Model):
 class projects(models.Model):
     title = models.CharField(max_length=200)
     description = models.CharField(max_length=200)
-    image = models.CharField(max_length=200)
+    image = models.ImageField(upload_to='files/covers')
     url = models.CharField(max_length=200)
     date = models.DateField(auto_now=True)

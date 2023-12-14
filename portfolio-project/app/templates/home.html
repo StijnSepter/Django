@@ -1,24 +1,11 @@
-{% extends "index.html" %}
-
+{% extends "index.html" %} 
 {% block projects %}
 <header>
-    <div class="project">
-        <h3 class="textAbout_project"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt!</h3>
-    </div>
-    <div class="project">
-
-    </div>
-    <div class="project">
-
-    </div>
-    <div class="project">
-
-    </div>
-    <div class="project">
-
-    </div>
-    <div class="project">
-    </div>
+  {% for projects in home %}
+  <div class="project">
+    <img src="{{ projects.url }}" alt="" srcset="" />
+    <h2>{{ projects.title }}</h2>
+    <h3 class="textAbout_project">{{ projects.description }}</h3>
+  </div>
 </header>
-
-{% endblock %}
+{% endfor %} {% endblock %}
