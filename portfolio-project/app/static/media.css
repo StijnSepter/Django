@@ -1,0 +1,25 @@
+@media only screen and (min-width: 1397px) {
+    header {
+      height: 1600px;
+      align-content: center;
+    }
+  }
+
+  @media only screen and (max-width: 843px) {
+    header {
+      height: 3200px;
+      align-content: center;
+    }
+  }
+
+  /*! voor als ik de hamburger niet altijd wil laten zien */
+  /* @media only screen and (min-width: 700px) {
+    .menu__btn{
+        display: none;
+    }
+  }
+    @media only screen and (max-width: 700px) {
+        .menu__btn{
+            display: block;
+        }
+    } */

@@ -6,3 +6,10 @@ class TodoItem(models.Model):
 
 class urlItem(models.Model):
     URL = models.CharField(max_length=255)
+
+class projects(models.Model):
+    title = models.CharField(max_length=200)
+    description = models.CharField(max_length=200)
+    image = models.CharField(max_length=200)
+    url = models.CharField(max_length=200)
+    date = models.DateField(auto_now=True)
