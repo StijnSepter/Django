@@ -3,7 +3,7 @@
 <header>
   {% for projects in home %}
   <div class="project">
-    <img src="{{ projects.url }}" alt="" srcset="" />
+    <img src="{{ projects.image.url }}" alt="" srcset="" />
     <h2>{{ projects.title }}</h2>
     <h3 class="textAbout_project">{{ projects.description }}</h3>
   </div>
