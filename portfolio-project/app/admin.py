@@ -4,4 +4,8 @@ from .models import TodoItem, urlItem, projects
 # Register your models here.
 admin.site.register(TodoItem)
 admin.site.register(urlItem)
-admin.site.register(projects)
+
+class adminProjects(admin.ModelAdmin):
+    readonly_fields = ('id',)
+
+admin.site.register(projects, adminProjects)

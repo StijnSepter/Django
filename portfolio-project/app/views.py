@@ -9,7 +9,6 @@ def home(reqeust):
     return render(reqeust, "home.html", {"home": project})
 #! home is wat ik gebruik in home.html om data te laten zien
 
-
 def todolist(reqeust):
     items = TodoItem.objects.all()
     return render(reqeust, "todolist.html", {"todolist": items})

@@ -1,11 +1,12 @@
-{% extends "index.html" %} 
-{% block projects %}
+{% extends "index.html" %} {% block projects %}
 <header>
-  {% for projects in home %}
+  {% if projects > 0 %} {% for projects in home %}
   <div class="project">
-    <img src="{{ projects.image.url }}" alt="" srcset="" />
+    <img src="{{ projects.image.url }}" alt="project" srcset="" />
     <h2>{{ projects.title }}</h2>
     <h3 class="textAbout_project">{{ projects.description }}</h3>
   </div>
+  {% endfor %} {% else %}
+  <h2>Sorry, there are no projects here</h2>
 </header>
-{% endfor %} {% endblock %}
+{% endif %} {% endblock %}
