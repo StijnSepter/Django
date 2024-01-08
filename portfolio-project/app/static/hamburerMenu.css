@@ -66,6 +66,3 @@
   text-decoration: none;
   transition-duration: .25s;
 }
-.menu__item:hover {
-  background-color: #CFD8DC;
-}
