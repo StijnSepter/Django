@@ -1,9 +1,8 @@
 from django.contrib import admin
-from .models import TodoItem, urlItem, projects
+from .models import projects, slideshow
 
 # Register your models here.
-admin.site.register(TodoItem)
-admin.site.register(urlItem)
+admin.site.register(slideshow)
 
 class adminProjects(admin.ModelAdmin):
     readonly_fields = ('id',)

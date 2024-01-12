@@ -1,37 +1,21 @@
 {% extends "index.html" %} {% block projects %}
-<header>
-  {% for projects in home %} 
-  <div class="project">
-    <a class="linkTo_projects" href="{{ projects.url}}">
+{% for projects in home %} 
+<div class="project">
+  <a class="linkTo_projects" href="{{ projects.url}}">
     <img class="project_image" src="{{ projects.image }}" alt="project" srcset="" />
-    <h2>{{ projects.title }}</h2>
+    <h2 class="project_title">{{ projects.title }}</h2>
     <h3 class="textAbout_project">{{ projects.description }}</h3>
   </a>
-  </div>
-  {% endfor %}
-</header>
-
-<!--* splitsing tussen de slideshow en projecten -->
-
-<div id="container_slideshow">
-  <div id="slideshow">
-        <div class="mySlides fade">
-          <div class="text">Caption Text</div>
-        </div>
-        
-        <div class="mySlides fade">
-          <img class="image_slideshow" src="" >
-          <div class="text">Caption Two</div>
-        </div>
-        
-        <div class="mySlides fade">
-          <img src="" alt="">
-          <div class="text">Caption Three</div>
-        </div>
-        <a class="prev" onclick="plusSlides(-1)">❮</a>
-        <a class="next" onclick="plusSlides(1)">❯</a>
-        </div>
-        <br>
-  </div>
 </div>
+{% endfor %}
+{% endblock %}
+{% block footer %}
+<footer>
+  <div id="footer_container">
+    <div class="footer__left">
+      <h3 class="footer__title">hello this is the footer </h3>
+      <p class="footer__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+    </div>
+  <div class="footer__icons">
+</footer>
 {% endblock %}

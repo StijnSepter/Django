@@ -26,9 +26,29 @@
         <h1>Hello I am Stijn Septer</h1><br>
         <!-- <h2 id="sub_title">Lorem ipsum dolor sit amet consectetur.</h2> -->
     </nav>
-    {% block projects %} {% endblock %}
-    <div>{% block todo %} {% endblock %}</div>
-    <footer></footer>
+    <header>
+      {% block projects %} {% endblock %}
+    </header>
+    <!--* splitsing tussen de slideshow en projecten -->
+    <div id="container_slideshow">
+      <div id="slideshow">
+        {% if info.len != 0 %}
+          {% for slideshow in info %}
+              <div class="mySlides fade">
+                <img src="{{ slideshow.image }}" alt="" srcset="">
+                <div class="textSlideshow"><p>{{ slideshow.description}}</p></div>
+              </div>
+          {% endfor %}
+        {% endif %}
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+            </div>
+            <br>
+      </div>
+    </div>
+    <footer>
+      {% block footer %} {% endblock %}
+    </footer>
   </body>
   <script src="{% static '../static/slideshow.js' %}"></script>
 </html>
