@@ -21,6 +21,7 @@ PROJECT_ROOT = os.path.join(REPOSITORY_ROOT, 'static/')
 MEDIA_ROOT = 'app/'
 STATIC_URL = 'static/'
 MEDIA_URL = ''
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
 # Quick-start development settings - unsuitable for production
