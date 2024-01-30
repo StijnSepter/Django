@@ -1,54 +1,32 @@
 {% load static %}
+{% load bootstrap5 %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio Stijn Septer</title>
-    <link rel="stylesheet" href="{% static 'style.css' %}" />
-    <link rel="stylesheet" href="{% static 'hamburerMenu.css' %}" />
-    <link rel="stylesheet" href="{% static 'media.css' %}" />
-  </head>
-  <body>
-    <nav>
-      <div>
-        <input id="menu__toggle" type="checkbox" style="display: none;"/>
-        <label class="menu__btn" for="menu__toggle">
-          <span span>
-        </label>
-        <ul class="menu__box">
-          <li><a class="menu__item" href="#">about me</a></li>
-          <li><a class="menu__item" href="#">products</a></li>
-          <li><a class="menu__item" href="#">my goal</a></li>
-          <li><a class="menu__item" href="#">contact</a></li>
-        </ul>
-      </div>
-        <h1>Hello I am Stijn Septer</h1><br>
-        <!-- <h2 id="sub_title">Lorem ipsum dolor sit amet consectetur.</h2> -->
-    </nav>
-    <header>
-      {% block projects %} {% endblock %}
-    </header>
-    <!--* splitsing tussen de slideshow en projecten -->
-    <div id="container_slideshow">
-      <div id="slideshow">
-        {% if info.len != 0 %}
-          {% for slideshow in info %}
-              <div class="mySlides fade">
-                <img src="{{ slideshow.image }}" alt="" srcset="">
-                <div class="textSlideshow"><p>{{ slideshow.description}}</p></div>
-              </div>
-          {% endfor %}
-        {% endif %}
-            <a class="prev" onclick="plusSlides(-1)">❮</a>
-            <a class="next" onclick="plusSlides(1)">❯</a>
-            </div>
-            <br>
-      </div>
-    </div>
-    <footer>
-      {% block footer %} {% endblock %}
-    </footer>
-  </body>
-  <script src="{% static '../static/slideshow.js' %}"></script>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title> Portfolio Stijn Septer </title>
+  
+  <link href="{% static '../static/style.css'%}" rel="stylesheet" />
+  <link href="{% static '../static/font-awesome.min.css' %}" rel="stylesheet" />
+  <link href="{% static '../static/bootstrap.css' %}" rel="stylesheet" />
+  <link href="{% static '../static/responsive.css'%}" rel="stylesheet" />
+</head>
+
+<body>
+   {% block content %}
+   {% endblock %}
+</body>
+  <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <!-- owl slider -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <!-- custom js -->
+  <script type="text/javascript" src="{% static '../static/javascript/main.js'%}"></script>
+  <script type="text/javascript" src="{% static '../static/javascript/jquery-3.4.1.min.js'%}"></script>
+  <script type="text/javascript" src="{% static '../static/javascript/bootstrap.js'%}"></script>
+  <script src="https://kit.fontawesome.com/228dbccfa4.js" crossorigin="anonymous"></script>
 </html>
