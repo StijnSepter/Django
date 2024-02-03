@@ -927,4 +927,21 @@ a:focus {
 .footer_section p a {
   color: inherit;
 }
+
+.contactButton{
+  background-color: #00bbf0;
+  color: #ffffff;
+  border-radius: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border: none;
+  margin-top: 15px;
+  padding: 10px 55px;
+}
+
+.contactButtonText{
+  color: #ffffff;
+  text-decoration: none;
+}
+
 /*# sourceMappingURL=style.css.map */
