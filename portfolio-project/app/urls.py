@@ -5,4 +5,5 @@ from django.conf import settings
 
 urlpatterns = [
     path("", views.home, name="home"), 
+    path("", views.Myskills, name="Myskills"),
 ] + static(settings.PROJECT_URL, document_root=settings.PROJECT_ROOT)

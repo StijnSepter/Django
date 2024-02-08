@@ -63,10 +63,16 @@
                     Septer
                   </h1>
                   <p>
-                    Explicabo esse amet tempora quibusdam laudantium, laborum
-                    eaque magnam fugiat hic? Esse dicta aliquid error
-                    repudiandae earum suscipit fugiat molestias, veniam, vel
-                    architecto veritatis delectus repellat modi impedit sequi.
+                    Welcome to my portfolio. Here you can find some of my
+                    project and information about me. you can always contact me
+                    and see my
+                    <a href="https://github.com/StijnSepter"> GitHub </a>
+                    and
+                    <a
+                      href="https://www.linkedin.com/in/stijn-septer-b0992324a/"
+                      >LinkedIn
+                    </a>
+                    to find more info about me. hope you enjoy my portfolio.
                   </p>
                 </div>
               </div>
@@ -91,7 +97,12 @@
                     and Interests
                   </h1>
                   <p>
-                    Just like many programmers I love to game. But I if I can choice between an online game or going to play a sport in a team I will always go and socialist. I have played field hockey for over 11 years and in that time, I played tennis for 4 years and never been the best player. But always liked to get better and have a fun time even if I lost. 
+                    Just like many programmers I love to game. But I if I can
+                    choice between an online game or going to play a sport in a
+                    team I will always go and socialist. I have played field
+                    hockey for over 11 years and in that time, I played tennis
+                    for 4 years and never been the best player. But always liked
+                    to get better and have a fun time even if I lost.
                   </p>
                 </div>
               </div>
@@ -116,7 +127,14 @@
                     about me
                   </h1>
                   <p>
-                    This is something you may want to know but, doesn’t have anything to do with programming. But it will tell something about me that tells you more about me. So, I am Stijn Septer, and I am dutch.  
+                    This is something you may want to know but, doesn’t have
+                    anything to do with programming. But it will tell something
+                    about me that tells you more about me. So, I am Stijn
+                    Septer, and I am dutch. I have lived in the Netherlands for
+                    my whole life. But have always loved to travel and see more
+                    of the world. and I believe that it you always have to grow
+                    and find new adventure and that is why I want to find a
+                    internship in a different country.
                   </p>
                 </div>
               </div>
@@ -154,280 +172,191 @@
       <div class="heading_container heading_center">
         <h2>A few <span>projects</span></h2>
         <p>
-          Here I have some of my best project that I have made in the past two years of my programming career.
+          Here I have some of my best project that I have made in the past two
+          years of my programming career.
         </p>
       </div>
       <div class="row">
+        {% for projects in home %}
         <div class="col-md-4">
           <div class="box">
             <div class="img-box">
-
-              <img
-                src="../static/images/Screenshot_2023-10-09_at_09.32.49.png"
-                alt=""
-              />
+              <img src="{{ projects.image }}" alt="a image of an project" />
             </div>
             <div class="detail-box">
-              <h5>Annexbios</h5>
-              <p>
-                This is a project that I made afthere one year of programing to show what I can make. This project I did in a dou and together we made a api and the front-end of the website.
-              </p>
-              <a href="">See for yourself </a>
+              <h5>{{ projects.title }}</h5>
+              <p>{{ projects.description }}</p>
+              <a href="{{ projects.url}}">See for yourself </a>
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="box">
-            <div class="img-box">
-              <img
-                src="../static/images/SpaceGame.png"
-                alt=""
-                style="width: 150px; height: 100px; object-fit: cover; "
-              />
-            </div>
-            <div class="detail-box">
-              <h5>space game in Pygame</h5>
-              <p>
-                Python was something I always was interested in So; with a tutorial I made this game. I made this in my first year of programming and was pretty proud of the finished product. Sadly, it isn’t a browser game so, if you want to see the finished product you mushed download the filles of my GitHub and then install Pygame with pip.  
-              </p>
-              <a href="">See for yourself </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="box">
-            <div class="img-box">
-              <img
-                src="../static/images/djangoPortfolio_annexbiosIMG.png"
-                alt=""
-              />
-            </div>
-            <div class="detail-box">
-              <h5>ToDoList in react </h5>
-              <p>
-                Here I made a Todo list in react. It probably speaks for itself but, none the less a slim explanation. Here is a list where you can add you own tasks that you can edit, read and delete. It is also possible to complete the task by clicking on the text of the task. If you are interested, click on the image and find out for yourself. 
-              </p>
-              <a href="">See for yourself </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="btn-box">
-        <a href=""> View All </a>
+        {% endfor %}
       </div>
     </div>
   </div>
 </section>
+  <!-- ! end of the projects -->
 
-<!-- ! end of the projects -->
+  <!-- ? about me -->
 
-<!-- ? about me -->
+  <section class="about_section layout_padding">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>About <span>Me</span></h2>
+        <p>Hello, here I will tell you something about me.</p>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="img-box">
+            <img
+              src="../static/images/djangoPortfolio_annexbiosIMG.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="detail-box">
+            <h3>hey, I am Stijn Septer</h3>
+            <p>
+              Hello, my name is Stijn Septer, and I am a Back-end web developer.
+              You may have seen that the front-end of this website is minimal
+              and that is because, I gain way more joy if I am working on the
+              backend of a website. This is why I made this portfolio in Django
+              and saved all of the data in the project and in the slideshow in
+              de Django database. I know that doesn’t really make any sense for
+              a portfolio but, it was fun challenge.
+            </p>
+            <p>
+              Another small problem was that it is difficult to host a Django
+              project on many serves. So, that is why I decided to get it a
+              raspberry pi to host this website. Another challenge for me was
+              the front-end, this is for the portfolio and may other project
+              that I have work on a bit of a struggle but, I got something that
+              works well enough. Hopefully you like the project that I have made
+              and if you want to see more, you can always check my GitHub.
+            </p>
+            <a href="https://github.com/StijnSepter" target="blank">
+              My GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section class="about_section layout_padding">
-  <div class="container">
-    <div class="heading_container heading_center">
-      <h2>About <span>Me</span></h2>
+  <!-- end about section -->
+
+  <!-- here start my skills -->
+
+  {% comment %}
+  <section class="why_section layout_padding">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>some of my <span>Skills</span></h2>
+      </div>
+      {% if Myskills|length < 5 %} {% for skills in Myskills %}
+      <div class="why_container">
+        <div class="box">
+          <div class="img-box">
+            {% comment %}! the database will give somthing like:
+            <i class="fa fa-html5"> </i> {% endcomment %} {% comment %} {{
+            Myskills.image|safe}}
+          </div>
+          <div class="detail-box">
+            <h5>{{ Myskills.title }}</h5>
+            <p>{{ Myskills.description }}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %} {% endif%}
+    </div>
+  </section>
+  {% endcomment %}
+
+  <!--! end of my skilles -->
+  <!--  ?here under start the footer -->
+
+  <section class="info_section layout_padding2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-3 info_col">
+          <div class="info_contact">
+            <h4>Address</h4>
+            <div class="contact_link_box">
+              <a
+                target="blank"
+                href="https://www.google.com/maps/place/Odijk/@52.0308027,5.2121821,12.82z/data=!4m6!3m5!1s0x47c65d61afd50fa1:0xc19524328d2f4ed3!8m2!3d52.0521446!4d5.2356248!16zL20vMDZxd3li?entry=ttu"
+              >
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span> Location </span>
+              </a>
+              <a href="https://api.whatsapp.com/send/?phone=0657987711">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span> Call +06 57987711 </span>
+              </a>
+              <a href="https://mail.google.com/mail/u/">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span> stijnsepter@gmail.com </span>
+              </a>
+            </div>
+          </div>
+          <div class="info_social">
+            <a href="https://www.linkedin.com/in/stijn-septer-b0992324a/">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+            <a href="https://github.com/StijnSepter">
+              <i class="fa-brands fa-github" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 info_col">
+          <div class="info_detail">
+            <h4>Info</h4>
+            <p>
+              necessary, making this the first true generator on the Internet.
+              It uses a dictionary of over 200 Latin words, combined with a
+              handful
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-2 mx-auto info_col">
+          <div class="info_link_box">
+            <h4>Links</h4>
+            <div class="info_links">
+              <a class="active" href="https://github.com/StijnSepter">
+                GitHub
+              </a>
+              <a
+                class=""
+                href="https://www.linkedin.com/in/stijn-septer-b0992324a/"
+              >
+                Linkedin
+              </a>
+              <a class="" href="https://mail.google.com/mail"> e-mail </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 info_col">
+          <h4>Contact me</h4>
+          <h6>if you want to contact me click the button down below</h6>
+          <a href="https://mail.google.com/mail" class="contactButtonText">
+            <button type="submit" class="contactButton">Contact</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="footer_section">
+    <div class="container">
+      <!-- dit moet ik nog veranderen  -->
       <p>
-        Hello, here I will tell you something about me.
+        &copy; <span id="displayYear"></span> All Rights Reserved By
+        <a href="https://html.design/">Free Html Templates</a>
       </p>
     </div>
-    <div class="row">
-      <div class="col-md-6">
-        <div class="img-box">
-          <img src="../static/images/djangoPortfolio_annexbiosIMG.png" alt="" />
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="detail-box">
-          <h3>hey, I am Stijn Septer</h3>
-          <p>
-            Hello, my name is Stijn Septer, and I am a Back-end web developer. You may have seen that the front-end of this website is minimal and that is because, I gain way more joy if I am working on the backend of a website. This is why I made this portfolio in Django and saved all of the data in the project and in the slideshow in de Django database. I know that doesn’t really make any sense for a portfolio but, it was fun challenge. 
-          </p>
-          <p>
-            Another small problem was that it is difficult to host a Django project on many serves. So, that is why I decided to get it a raspberry pi to host this website. Another challenge for me was the front-end, this is for the portfolio and may other project that I have work on a bit of a struggle but, I got something that works well enough. Hopefully you like the project that I have made and if you want to see more, you can always check my GitHub. 
-          </p>
-          <a href="https://github.com/StijnSepter" target="blank"> My GitHub </a>
-        </div>
-      </div>
-    </div>
-  </div>
+  </section>
+
+  <!-- end client section -->
+  {% endblock %}
 </section>
-
-<!-- end about section -->
-
-<!-- why section -->
-
-<section class="why_section layout_padding">
-  <div class="container">
-    <div class="heading_container heading_center">
-      <h2>some of my <span>Skills</span></h2>
-    </div>
-    <div class="why_container">
-      <div class="box">
-        <div class="img-box">
-          <img src="../static/images/djangoPortfolio_annexbiosIMG.png" alt="" />
-        </div>
-        <div class="detail-box">
-          <h5>HTLM</h5>
-          <p>
-            Incidunt odit rerum tenetur alias architecto asperiores omnis cumque
-            doloribus aperiam numquam! Eligendi corrupti, molestias laborum
-            dolores quod nisi vitae voluptate ipsa? In tempore voluptate ducimus
-            officia id, aspernatur nihil. Tempore laborum nesciunt ut veniam,
-            nemo officia ullam repudiandae repellat veritatis unde reiciendis
-            possimus animi autem natus
-          </p>
-        </div>
-      </div>
-      <div class="box">
-        <div class="img-box">
-          <img src="../static/images/djangoPortfolio_annexbiosIMG.png" alt="" />
-        </div>
-        <div class="detail-box">
-          <h5>CSS</h5>
-          <p>
-            Incidunt odit rerum tenetur alias architecto asperiores omnis cumque
-            doloribus aperiam numquam! Eligendi corrupti, molestias laborum
-            dolores quod nisi vitae voluptate ipsa? In tempore voluptate ducimus
-            officia id, aspernatur nihil. Tempore laborum nesciunt ut veniam,
-            nemo officia ullam repudiandae repellat veritatis unde reiciendis
-            possimus animi autem natus
-          </p>
-        </div>
-      </div>
-      <div class="box">
-        <div class="img-box">
-          <img src="../static/images/djangoPortfolio_annexbiosIMG.png" alt="" />
-        </div>
-        <div class="detail-box">
-          <h5>JS</h5>
-          <p>
-            Incidunt odit rerum tenetur alias architecto asperiores omnis cumque
-            doloribus aperiam numquam! Eligendi corrupti, molestias laborum
-            dolores quod nisi vitae voluptate ipsa? In tempore voluptate ducimus
-            officia id, aspernatur nihil. Tempore laborum nesciunt ut veniam,
-            nemo officia ullam repudiandae repellat veritatis unde reiciendis
-            possimus animi autem natus
-          </p>
-        </div>
-      </div>
-      <div class="box">
-        <div class="img-box">
-          <img src="../static/images/djangoPortfolio_annexbiosIMG.png" alt="" />
-        </div>
-        <div class="detail-box">
-          <h5>
-            PHP
-          </h5>
-          <p>
-            Incidunt odit rerum tenetur alias architecto asperiores omnis cumque
-            doloribus aperiam numquam! Eligendi corrupti, molestias laborum
-            dolores quod nisi vitae voluptate ipsa? In tempore voluptate ducimus
-            officia id, aspernatur nihil. Tempore laborum nesciunt ut veniam,
-            nemo officia ullam repudiandae repellat veritatis unde reiciendis
-            possimus animi autem natus
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="btn-box">
-      <a href=""> Read More </a>
-    </div>
-  </div>
-</section>
-
-<!--! end of my skilles -->
-<!--  ?here under start the footer -->
-
-<section class="info_section layout_padding2">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-lg-3 info_col">
-        <div class="info_contact">
-          <h4>
-            Address
-          </h4>
-          <div class="contact_link_box">
-            <a target="blank" href="https://www.google.com/maps/place/Odijk/@52.0308027,5.2121821,12.82z/data=!4m6!3m5!1s0x47c65d61afd50fa1:0xc19524328d2f4ed3!8m2!3d52.0521446!4d5.2356248!16zL20vMDZxd3li?entry=ttu">
-              <i class="fa fa-map-marker" aria-hidden="true"></i>
-              <span>
-                Location
-              </span>
-            </a>
-            <a href="https://api.whatsapp.com/send/?phone=0657987711">
-              <i class="fa fa-phone" aria-hidden="true"></i>
-              <span>
-                Call +06 57987711
-              </span>
-            </a>
-            <a href="https://mail.google.com/mail/u/">
-              <i class="fa fa-envelope" aria-hidden="true"></i>
-              <span>
-                stijnsepter@gmail.com
-              </span>
-            </a>
-          </div>
-        </div>
-        <div class="info_social">
-          <a href="https://www.linkedin.com/in/stijn-septer-b0992324a/">
-            <i class="fa fa-linkedin" aria-hidden="true"></i>
-          </a>
-          <a href="https://github.com/StijnSepter">
-            <i class="fa-brands fa-github" aria-hidden="true"></i>
-          </a>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-3 info_col">
-        <div class="info_detail">
-          <h4>
-            Info
-          </h4>
-          <p>
-            necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful
-          </p>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-2 mx-auto info_col">
-        <div class="info_link_box">
-          <h4>
-            Links
-          </h4>
-          <div class="info_links">
-            <a class="active" href="./">
-              GitHub
-            </a>
-            <a class="" href="./">
-              Linkedin
-            </a>
-            <a class="" href="https://mail.google.com/mail">
-             e-mail
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-3 info_col ">
-        <h4>
-          Contact me
-        </h4>
-          <h6>if you want to contect my click down here</h6>
-          <button type="submit" class="contactButton">
-            <a href="https://mail.google.com/mail" class="contactButtonText">
-            Contact
-            </a>
-          </button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="footer_section">
-  <div class="container">
-    <p>
-      &copy; <span id="displayYear"></span> All Rights Reserved By
-      <a href="https://html.design/">Free Html Templates</a>
-    </p>
-  </div>
-</section>
-
-<!-- end client section -->
-{% endblock %}
