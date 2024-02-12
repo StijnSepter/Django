@@ -10,7 +10,6 @@ def home(reqeust):
     return render(reqeust, "home.html", {"home": project})
 #! here I use slideshow to get the data from the database and pass it to the home.html file
 
-
 def Myskills(reqeust):
     skillsItem = skill.objects.all()
     return render(reqeust, "home.html", {"Myskills": skillsItem}),

@@ -10,12 +10,9 @@ class projects(models.Model):
     date = models.DateField(auto_now=True)
 
 class skill(models.Model):
-    title = models.CharField(max_length=200)
-    description = models.CharField(max_length=255)
-    image = models.TextField(max_length=255)
-    date = models.DateField(auto_now=True)
-    id = models.AutoField(primary_key=True)
-    
-    def save(self, force_insert=False, force_update=False):
-        self.text = markdown(self.text)
-        super(skill, self).save(force_insert, force_update)
+    title_skills = models.CharField(max_length=200)
+    description_skills = models.CharField(max_length=255)
+    icon_skills = models.TextField(max_length=255)
+    date_skills = models.DateField(auto_now=True)
+    id_skills = models.AutoField(primary_key=True)
+
