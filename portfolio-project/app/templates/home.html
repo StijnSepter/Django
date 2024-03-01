@@ -5,16 +5,6 @@
       <img src="../static/images/portfolioBackground_image.avif" alt="Lorem" />
     </div>
   </div>
-  <script>
-    function myFunction() {
-      var x = document.getElementById("myLinks");
-      if (x.style.display === "block") {
-        x.style.display = "none";
-      } else {
-        x.style.display = "block";
-      }
-    }
-    </script>
   <!-- header section strats -->
   <header class="header_section" id="home">
     <div class="container-fluid">
@@ -23,17 +13,8 @@
           <span> Portfolio </span>
         </a>
 
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-
-          <span class="" onclick=""></span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="" onclick"toggleCollapse()"> </span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -206,7 +187,7 @@
 
   <!-- ? about me -->
 
-  <section class="about_section layout_padding">
+<section class="about_section layout_padding">
     <div class="container">
       <div class="heading_container heading_center">
         <h2>About <span>Me</span></h2>
@@ -249,13 +230,13 @@
         </div>
       </div>
     </div>
-  </section>
+</section>
 
   <!-- end about section -->
   <!-- here under I display my skills out of the database -->
 
   
-  <section class="why_section layout_padding">
+<section class="why_section layout_padding">
     <div class="container">
       <div class="heading_container heading_center">
         <h2 id="some_skills">some of my <span>Skills</span></h2>
@@ -274,12 +255,12 @@
       </div>
       {% endfor %}
     </div>
-  </section>
+</section>
 
   <!--! end of my skilles -->
   <!--  ?here under start the footer -->
 
-  <section class="info_section layout_padding2">
+<section class="info_section layout_padding2">
     <div class="container">
       <div class="row">
         <div class="col-md-6 col-lg-3 info_col">
@@ -346,18 +327,16 @@
         </div>
       </div>
     </div>
-  </section>
+</section>
 
-  <section class="footer_section">
-    <div class="container">
+<section class="footer_section">
+  <div class="container">
       <!-- dit moet ik nog veranderen  -->
       <p>
         &copy; <span id="displayYear"></span> 
         if you want to see the code of this website you can always check my <a href="https://github.com/StijnSepter">GitHub</a>
       </p>
     </div>
-  </section>
-
-  <!-- end client section -->
-  {% endblock %}
 </section>
+<!-- end of the footer -->
+{% endblock %}
