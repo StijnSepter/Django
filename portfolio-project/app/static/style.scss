@@ -408,8 +408,6 @@ a:focus {
         text-transform: uppercase;
       }
 
-      p {}
-
       a {
         color: $primary2;
         font-weight: 600;
@@ -793,6 +791,9 @@ a:focus {
       color: inherit;
     }
   }
+}
+.iconSkills{
+  font-size: 62px;
 }
 
 // end footer section

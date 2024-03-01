@@ -5,13 +5,22 @@
       <img src="../static/images/portfolioBackground_image.avif" alt="Lorem" />
     </div>
   </div>
-
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+    </script>
   <!-- header section strats -->
-  <header class="header_section">
+  <header class="header_section" id="home">
     <div class="container-fluid">
       <nav class="navbar navbar-expand-lg custom_nav-container">
         <a class="navbar-brand" href="#home">
-          <span id="home"> Portfolio </span>
+          <span> Portfolio </span>
         </a>
 
         <button
@@ -23,7 +32,8 @@
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class=""> </span>
+
+          <span class="" onclick=""></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -69,7 +79,7 @@
                       href="https://www.linkedin.com/in/stijn-septer-b0992324a/"
                       >LinkedIn
                     </a>
-                    to find more info about me. hope you enjoy my portfolio.
+                    to find more information about me. hope you enjoy my portfolio.
                   </p>
                 </div>
               </div>
@@ -183,7 +193,7 @@
             <div class="detail-box">
               <h5>{{ projects.title }}</h5>
               <p>{{ projects.description }}</p>
-              <a href="{{ projects.url}}" target='blank'>See for yourself </a>
+                <a href="{{ projects.url}}" target='blank'>See for yourself </a>
             </div>
           </div>
         </div>
@@ -244,32 +254,27 @@
   <!-- end about section -->
   <!-- here under I display my skills out of the database -->
 
+  
   <section class="why_section layout_padding">
     <div class="container">
       <div class="heading_container heading_center">
         <h2 id="some_skills">some of my <span>Skills</span></h2>
       </div>
-      {% comment %} {% if Myskills|length < 5 %}  {% endcomment %}
-      {% for skill in Myskills %}
+      {% for skill in skillItems %}
       <div class="why_container">
         <div class="box">
-          <div class="img-box">
-            
-            {% comment %} <p> dit is een test </p> {% endcomment %}
-            {% comment %} ! the database will give somthing like: <i class="fa fa-html5"> </i>  {% endcomment %}
-            {{Myskills.image|safe}}
+          <div class="img-box"> 
+            {{skill.image|safe}}
           </div>
           <div class="detail-box">
-            <h5>{{ Myskills.title }}</h5>
-            <p>{{ Myskills.description }}</p>
+            <h5>{{ skill.title }}</h5>
+            <p>{{ skill.description }}</p>
           </div>
         </div>
       </div>
       {% endfor %}
-      {% comment %} {% endif%} {% endcomment %}
     </div>
   </section>
-
 
   <!--! end of my skilles -->
   <!--  ?here under start the footer -->
@@ -309,7 +314,7 @@
         </div>
         <div class="col-md-6 col-lg-3 info_col">
           <div class="info_detail">
-            <h4>Info</h4>
+            <h4>Information</h4>
             <p>
               If you want to contact me send me a mail or give me a call. If you are interested, you can always see my GitHub where nearly every project is on public. If you have any questions, please let me know. 
             </p>
@@ -347,8 +352,8 @@
     <div class="container">
       <!-- dit moet ik nog veranderen  -->
       <p>
-        &copy; <span id="displayYear"></span> All Rights Reserved By
-        <a href="https://html.design/">Free Html Templates</a>
+        &copy; <span id="displayYear"></span> 
+        if you want to see the code of this website you can always check my <a href="https://github.com/StijnSepter">GitHub</a>
       </p>
     </div>
   </section>
