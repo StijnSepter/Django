@@ -11,7 +11,7 @@ class projects(models.Model):
 
 class skill(models.Model):
     title = models.CharField(max_length=200)
-    description = models.CharField(max_length=255)
+    description = models.TextField(max_length=1024)
     image = models.TextField(max_length=255)
     date = models.DateField(auto_now=True)
     id = models.AutoField(primary_key=True)
