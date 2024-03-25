@@ -23,6 +23,15 @@ STATIC_URL = 'static/'
 MEDIA_URL = ''
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
+STORAGES = {
+    "default": {
+        "BACKEND": "django.core.files.storage.FileSystemStorage",
+    },
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
@@ -32,7 +41,7 @@ SECRET_KEY = 'django-insecure-h*m89913fgv%t8yr7_@0$@n$66*u4$riukcth5)3-c+00p7z!9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [".awsapprunner.com"]
 
 
 # Application definition
@@ -56,6 +65,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 
 ROOT_URLCONF = 'portfolio.urls'
@@ -77,7 +88,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'portfolio.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
