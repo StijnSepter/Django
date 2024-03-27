@@ -144,3 +144,13 @@ SILENCED_SYSTEM_CHECKS = ["auth.W004"]
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AWS_ACCESS_KEY_ID = 'AKIAXYKJVW53SEKGEDLR'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'stijns'
+AWS_S3_SIGNATURE_NAME = 's3v4'
+AWS_S3_REGION_NAME = 'eu-west-3'
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEAFULT_ACL = None
+AWS_S3_VERITY = True
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
