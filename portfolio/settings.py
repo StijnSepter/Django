@@ -23,14 +23,14 @@ STATIC_URL = 'static/'
 MEDIA_URL = ''
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-STORAGES = {
-    "default": {
-        "BACKEND": "django.core.files.storage.FileSystemStorage",
-    },
-    "staticfiles": {
-        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
-    },
-}
+# STORAGES = {
+#     "default": {
+#         "BACKEND": "django.core.files.storage.FileSystemStorage",
+#     },
+#     "staticfiles": {
+#         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+#     },
+# }
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -41,7 +41,8 @@ SECRET_KEY = 'django-insecure-h*m89913fgv%t8yr7_@0$@n$66*u4$riukcth5)3-c+00p7z!9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [ 'localhost','127.0.0.1','13.38.128.183', '13.38.9.42']
+ALLOWED_HOSTS = ['*', '77.162.237.250']
+
 
 # Application definition
 
@@ -93,8 +94,12 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'databaseportfolio',
+        'USER': 'stijn',
+        'PASSWORD': 'Hock325!',
+        'HOST': 'databaseportfolio.clew2e2ky6fe.eu-west-3.rds.amazonaws.com', 
+        'PORT': '5432',
     }
 }
 
