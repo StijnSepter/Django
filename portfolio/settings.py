@@ -41,7 +41,7 @@ SECRET_KEY = 'django-insecure-h*m89913fgv%t8yr7_@0$@n$66*u4$riukcth5)3-c+00p7z!9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['35.180.41.136', '172.31.0.0/16']
+ALLOWED_HOSTS = ['*']	
 
 
 # Application definition
@@ -95,7 +95,7 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'databaseportfolio',
+        'NAME': 'postgres',
         'USER': 'stijn',
         'PASSWORD': 'Hock325!',
         'HOST': 'databaseportfolio.clew2e2ky6fe.eu-west-3.rds.amazonaws.com', 
