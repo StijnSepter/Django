@@ -41,6 +41,7 @@ SECRET_KEY = 'L94iC47ekmCa8Fera+nVH1hevcuo4yktM+9wFHZ+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+listen_addresses = '*'
 ALLOWED_HOSTS = ['*']	
 
 
